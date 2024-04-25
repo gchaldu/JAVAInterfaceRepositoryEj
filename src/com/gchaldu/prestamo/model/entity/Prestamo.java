@@ -18,6 +18,11 @@ public class Prestamo {
         this.usuario = usuario;
     }
 
+    public Prestamo(Date fechaPrestamo, Date fechaDevolucion) {
+        this.fechaPrestamo = fechaPrestamo;
+        this.fechaDevolucion = fechaDevolucion;
+    }
+
     public Date getFechaPrestamo() {
         return fechaPrestamo;
     }

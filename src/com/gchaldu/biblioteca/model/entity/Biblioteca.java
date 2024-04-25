@@ -2,38 +2,35 @@ package com.gchaldu.biblioteca.model.entity;
 
 import com.gchaldu.interfaces.Prestable;
 import com.gchaldu.interfaces.Repository;
+import com.gchaldu.prestamo.controller.PrestamoController;
 import com.gchaldu.prestamo.model.entity.Prestamo;
 
-public class Biblioteca implements Repository, Prestable{
+import java.util.Date;
+import java.util.List;
 
+public class Biblioteca implements Prestable{
 
-    @Override
-    public void realizarPrestamo(Prestamo prestamo) {
+    private PrestamoController prestamoController;
 
+    public Biblioteca(PrestamoController prestamoController) {
+        this.prestamoController = prestamoController;
     }
 
     @Override
-    public void registrarDevolucion(Prestamo prestamo) {
-
+    public void realizarPrestamo() {
+        prestamoController.addPrestamo();
     }
 
     @Override
-    public void registrar(Object obj) {
+    public void registrarDevolucion() {
 
     }
 
-    @Override
-    public Object consultar(String id) {
-        return null;
+    public PrestamoController getPrestamoController() {
+        return prestamoController;
     }
 
-    @Override
-    public void actualizar(String id, Object obj) {
-
-    }
-
-    @Override
-    public void eliminar(String id) {
-
+    public void setPrestamoController(PrestamoController prestamoController) {
+        this.prestamoController = prestamoController;
     }
 }

@@ -10,16 +10,16 @@ public class UsuarioView {
     public Usuario addUsuario(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese nombre");
+        System.out.println("Ingrese nombre del Usuario");
         String nom = scanner.nextLine();
 
-        System.out.println("Ingrese apellido");
+        System.out.println("Ingrese apellido del Usuario");
         String ape = scanner.nextLine();
 
-        System.out.println("Ingrese indentificador");
+        System.out.println("Ingrese indentificador del Usuario");
         String id = scanner.nextLine();
 
-        System.out.println("Ingrese tipo");
+        System.out.println("Ingrese tipo del Usuario");
         String tipo = scanner.nextLine();
 
         Usuario usuario = new Usuario(nom,ape,id,tipo);
